@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
-using AssetLib.Providers;
+using BSAssetLib.Providers;
 using Zenject;
 
-namespace AssetLib.Installers
+namespace BSAssetLib.Installers
 {
-    internal class AssetLibMenuInstaller : Installer
+    internal class BSAssetLibMenuInstaller : Installer
     {
         public override void InstallBindings()
         {

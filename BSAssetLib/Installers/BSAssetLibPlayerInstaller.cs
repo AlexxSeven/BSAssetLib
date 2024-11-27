@@ -1,12 +1,12 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Linq;
-using AssetLib.Providers;
+using BSAssetLib.Providers;
 using Zenject;
 
-namespace AssetLib.Installers
+namespace BSAssetLib.Installers
 {
-    internal class AssetLibPlayerInstaller : Installer
+    internal class BSAssetLibPlayerInstaller : Installer
     {
         public override void InstallBindings()
         {

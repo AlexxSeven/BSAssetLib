@@ -5,9 +5,9 @@ using HarmonyLib;
 using IPA;
 using IPALogger = IPA.Logging.Logger;
 using SiraUtil.Zenject;
-using AssetLib.Installers;
+using BSAssetLib.Installers;
 
-namespace AssetLib
+namespace BSAssetLib
 {
     [Plugin(RuntimeOptions.SingleStartInit)]
     internal class Plugin
@@ -16,9 +16,9 @@ namespace AssetLib
         public Plugin(IPALogger logger, Zenjector zenjector)
         {
             Log = logger;
-            zenjector.Install<AssetLibMenuInstaller>(Location.Menu);
-            zenjector.Install<AssetLibAppInstaller>(Location.App);
-            zenjector.Install<AssetLibPlayerInstaller>(Location.Player);
+            zenjector.Install<BSAssetLibMenuInstaller>(Location.Menu);
+            zenjector.Install<BSAssetLibAppInstaller>(Location.App);
+            zenjector.Install<BSAssetLibPlayerInstaller>(Location.Player);
         }
 
         public static IPALogger Log { get; set; } = null!;

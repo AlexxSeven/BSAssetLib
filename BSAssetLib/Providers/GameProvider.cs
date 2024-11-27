@@ -2,16 +2,16 @@
 using System.Linq;
 using Zenject;
 
-namespace AssetLib.Providers
+namespace BSAssetLib.Providers
 {
     internal class GameProvider : IInitializable
     {
-        private readonly Scripts.AssetLib _assetLib;
+        private readonly Scripts.BSAssetLib _bsAssetLib;
         private readonly ColorScheme _colorScheme;
 
         public void Initialize ()
         {
-            _assetLib.UpdateColorScheme(_colorScheme);
+            _bsAssetLib.UpdateColorScheme(_colorScheme);
         }
     }
 }

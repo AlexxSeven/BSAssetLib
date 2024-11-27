@@ -2,9 +2,9 @@
 using System.Linq;
 using UnityEngine;
 
-namespace AssetLib.Scripts
+namespace BSAssetLib.Scripts
 {
-    internal class AssetLib
+    internal class BSAssetLib
     {
         private static readonly int _colSaberL = Shader.PropertyToID("_ColSaberL");
         private static readonly int _colSaberR = Shader.PropertyToID("_ColSaberR");
@@ -15,21 +15,21 @@ namespace AssetLib.Scripts
         private static readonly int _colWall = Shader.PropertyToID("_ColWall");
         internal void UpdateColorScheme(ColorScheme colorScheme)
         {
-            Shader.SetGlobalColor(AssetLib._colSaberL, colorScheme.saberAColor);
-            Shader.SetGlobalColor(AssetLib._colSaberR, colorScheme.saberBColor);
-            Shader.SetGlobalColor(AssetLib._colLight0, colorScheme.environmentColor0);
-            Shader.SetGlobalColor(AssetLib._colLight1, colorScheme.environmentColor1);
-            Shader.SetGlobalColor(AssetLib._colWall, colorScheme.obstaclesColor);
+            Shader.SetGlobalColor(BSAssetLib._colSaberL, colorScheme.saberAColor);
+            Shader.SetGlobalColor(BSAssetLib._colSaberR, colorScheme.saberBColor);
+            Shader.SetGlobalColor(BSAssetLib._colLight0, colorScheme.environmentColor0);
+            Shader.SetGlobalColor(BSAssetLib._colLight1, colorScheme.environmentColor1);
+            Shader.SetGlobalColor(BSAssetLib._colWall, colorScheme.obstaclesColor);
 
             if(colorScheme.supportsEnvironmentColorBoost)
             {
-                Shader.SetGlobalColor(AssetLib._colBoost0, colorScheme.environmentColor0Boost);
-                Shader.SetGlobalColor(AssetLib._colBoost1, colorScheme.environmentColor1Boost);
+                Shader.SetGlobalColor(BSAssetLib._colBoost0, colorScheme.environmentColor0Boost);
+                Shader.SetGlobalColor(BSAssetLib._colBoost1, colorScheme.environmentColor1Boost);
             }
             else
             {
-                Shader.SetGlobalColor(AssetLib._colBoost0, colorScheme.environmentColor0);
-                Shader.SetGlobalColor(AssetLib._colBoost1, colorScheme.environmentColor1);
+                Shader.SetGlobalColor(BSAssetLib._colBoost0, colorScheme.environmentColor0);
+                Shader.SetGlobalColor(BSAssetLib._colBoost1, colorScheme.environmentColor1);
             }
         }
     }

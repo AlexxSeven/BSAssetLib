@@ -3,16 +3,16 @@ using System.Linq;
 using SiraUtil.Affinity;
 using UnityEngine;
 
-namespace AssetLib.Providers
+namespace BSAssetLib.Providers
 {
     internal class MenuProvider : IAffinity
     {
-        private readonly Scripts.AssetLib _assetLib;
+        private readonly Scripts.BSAssetLib _bsAssetLib;
         private readonly PlayerDataModel _playerDataModel;
 
-        private MenuProvider(Scripts.AssetLib assetLib, PlayerDataModel playerDataModel)
+        private MenuProvider(Scripts.BSAssetLib bsAssetLib, PlayerDataModel playerDataModel)
         {
-            _assetLib = assetLib;
+            _bsAssetLib = bsAssetLib;
             _playerDataModel = playerDataModel;
             UpdateColorScheme();
         }
@@ -29,7 +29,7 @@ namespace AssetLib.Providers
             "HandleDropDownDidSelectCellWithIdx")]
         private void UpdateColorScheme()
         {
-            _assetLib.UpdateColorScheme(_playerDataModel.playerData.colorSchemesSettings.GetOverrideColorScheme());
+            _bsAssetLib.UpdateColorScheme(_playerDataModel.playerData.colorSchemesSettings.GetOverrideColorScheme());
         }
     }
 }
