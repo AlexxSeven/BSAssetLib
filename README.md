@@ -17,7 +17,7 @@ _ColLight0 \\Fist Light Color
 _ColLight1 \\Second Light Color
 _ColBoost0 \\First Boost Color (or) First Light Color if scheme unsupported
 _ColBoost1 \\Second Boost Color (or) Second Light Color if scheme unsupported
-_ColWall \\Obsticals Color
+_ColWall \\Obstacles Color
 ```
 > [!IMPORTANT]
 > don't expose these varibales inside of the shader property block as they're meant to be global and will be set by the mod.
