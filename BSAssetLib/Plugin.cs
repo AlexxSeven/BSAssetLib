@@ -1,7 +1,6 @@
 ﻿
 using System;
 using System.Reflection;
-using HarmonyLib;
 using IPA;
 using IPALogger = IPA.Logging.Logger;
 using SiraUtil.Zenject;
