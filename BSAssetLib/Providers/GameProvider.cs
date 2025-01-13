@@ -8,16 +8,18 @@ namespace BSAssetLib.Providers
     {
         private readonly Scripts.BSAssetLib _bsAssetLib;
         private readonly ColorScheme _colorScheme;
+        private readonly ColorScheme _beatmapColorScheme;
 
-        private GameProvider(Scripts.BSAssetLib bsAssetLib, ColorScheme colorScheme)
+        private GameProvider(Scripts.BSAssetLib bsAssetLib, ColorScheme colorScheme, GameplayCoreSceneSetupData gameplayCoreSceneSetupData)
         {
             _bsAssetLib = bsAssetLib;
             _colorScheme = colorScheme;
+            _beatmapColorScheme = gameplayCoreSceneSetupData.colorScheme;
         }
 
         public void Initialize ()
         {
-            _bsAssetLib.UpdateColorScheme(_colorScheme);
+            _bsAssetLib.SetColorSchemeData(_beatmapColorScheme, _colorScheme);
         }
     }
 }

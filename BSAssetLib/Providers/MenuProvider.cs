@@ -44,6 +44,10 @@ namespace BSAssetLib.Providers
         [AffinityPatch(
             typeof(ColorsOverrideSettingsPanelController),
             "HandleDropDownDidSelectCellWithIdx")]
+        [AffinityPatch(
+            typeof(ColorsOverrideSettingsPanelController),
+            "HandleColorOverrideTypeDropdownDidSelectCellWithIdx")]
+
         private void UpdateColorScheme()
         {
             _bsAssetLib.UpdateColorScheme(_playerDataModel.playerData.colorSchemesSettings.GetOverrideColorScheme() ?? MenuColors);
